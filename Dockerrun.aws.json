@@ -20,7 +20,18 @@
         },
         {
             "name": "loginapp",
+            "links": [
+                "mysql-server"
+            ],
             "image": "banuaraidi/loginapp",
+            "essential": false,
+            "memory": 128,
+            "portMappings": [
+                {
+                    "containerPort": 8888,
+                    "hostPort": 80
+                }
+            ],
             "environment": [
                 {
                     "name": "MSHOST",
@@ -47,11 +58,6 @@
                     "value": "90"
                 }
             ],
-            "links": [
-                "mysql-server"
-            ],
-            "memory": 128,
-            "essential": false
         }
     ]
 }
